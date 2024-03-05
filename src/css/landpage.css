@@ -20,14 +20,18 @@
 
 .circle div:nth-child(1) {
   animation: anim_01 2s forwards;
+  
 }
 
 .circle div:nth-child(2) {
   visibility: hidden;
   background: rgba(255, 255, 255, 0);
   animation: move_01 1s 2s, move_02 1.2s linear 3s;
-  box-shadow: -6em -6em rgba(255, 255, 255, 1), 6em -6em rgba(255, 255, 255, 1),
-    6em 6em rgba(255, 255, 255, 1), -6em 6em rgba(255, 255, 255, 1);
+  box-shadow:
+      -6em -6em rgba(255, 255, 255, 1),
+      6em -6em rgba(255, 255, 255, 1),
+      6em 6em rgba(255, 255, 255, 1),
+      -6em 6em rgba(255, 255, 255, 1)
 }
 
 @keyframes anim_01 {
@@ -67,12 +71,12 @@
     visibility: inherit;
   }
   50% {
-    transform: rotate(-360deg) scale(0);
-  }
-
+      transform: rotate(-360deg) scale(0);
+    }
+  
   100% {
-    transform: translate(0) scale(0);
-  }
+      transform: translate(0) scale(0);
+    }
 }
 
 /* explode */
@@ -298,45 +302,45 @@
     font-size: 3rem;
   }
   @keyframes animateBar {
-    0%,
-    2.5% {
-      transform: scaleY(0) translateX(0);
-    }
-    10% {
-      transform: scaleY(1) translateX(0);
-    }
-    90% {
-      transform: scaleY(1) translateX(19.5rem);
-    }
-    95%,
-    100% {
-      transform: scaleY(0) translateX(19.5rem);
-    }
+  0%,
+  2.5% {
+    transform: scaleY(0) translateX(0);
+  }
+  10% {
+    transform: scaleY(1) translateX(0);
+  }
+  90% {
+    transform: scaleY(1) translateX(19.5rem);
+  }
+  95%,
+  100% {
+    transform: scaleY(0) translateX(19.5rem);
+  }
+}
+
+@keyframes animateBarLayer {
+  0%,
+  5% {
+    transform: translateX(0);
   }
 
-  @keyframes animateBarLayer {
-    0%,
-    5% {
-      transform: translateX(0);
-    }
-
-    45% {
-      transform: translateX(19.5rem);
-    }
-    50% {
-      transform: translateX(19.5rem) scale(0);
-    }
-
-    50.001%,
-    55% {
-      transform: translateX(-22rem) scale(1);
-    }
-
-    98%,
-    100% {
-      transform: translateX(-1.5rem);
-    }
+  45% {
+    transform: translateX(19.5rem);
   }
+  50% {
+    transform: translateX(19.5rem) scale(0);
+  }
+
+  50.001%,
+  55% {
+    transform: translateX(-22rem) scale(1);
+  }
+
+  98%,
+  100% {
+    transform: translateX(-1.5rem);
+  }
+}
 
   .linkBox {
     flex-direction: row;
