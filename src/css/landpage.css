@@ -226,10 +226,10 @@
 
   50.001%,
   55% {
-    transform: translateX(-16.5rem) scale(1);
+    transform: translateX(-16rem) scale(1);
   }
 
-  95%,
+  90%,
   100% {
     transform: translateX(-1.5rem);
   }
