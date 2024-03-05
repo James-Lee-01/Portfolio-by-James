@@ -5,11 +5,11 @@ const app = express();
 const port = 3001;
 
 // 設定靜態檔案路徑
-app.use(express.static(path.join(__dirname, "src")));
+app.use(express.static(path.join(__dirname, "dist")));
 
 // 處理根路由的請求
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "src", "index.html"));
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 // 開始監聽

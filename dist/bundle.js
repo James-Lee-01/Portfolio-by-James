@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_landpage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/landpage.css */ \"./src/css/landpage.css\");\n\n\n\nconsole.log('welcome-css-animation');\n\n//# sourceURL=webpack://welcome-css-animation/./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_landpage_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/landpage.css */ \"./src/css/landpage.css\");\n\n\n\n//# sourceURL=webpack://welcome-css-animation/./src/main.js?");
 
 /***/ })
 
