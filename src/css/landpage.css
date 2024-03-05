@@ -212,7 +212,7 @@
   width: calc(100% + 3rem);
   height: calc(100% + 0.5rem);
   background: rgb(12, 12, 12);
-  animation: animateBarLayer 11s 5.4s 1.5 forwards;
+  animation: animateBarLayer 10.95s 5.4s 1.5 forwards;
 }
 
 @keyframes animateBarLayer {
