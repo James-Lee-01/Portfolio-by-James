@@ -19,6 +19,7 @@ body {
 /*!************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/landpage.css ***!
   \************************************************************************/
+/* first ball bounce and separate into 4 parts */
 .circle {
   position: absolute;
   top: 0;
@@ -151,7 +152,7 @@ body {
   border-left: 150vw solid rgba(255, 255, 255, 0);
   border-right: 150vw solid rgba(255, 255, 255, 0);
   border-bottom: 500vw solid rgb(12, 12, 12);
-  animation: curtain .6s 5.3s linear forwards;
+  animation: curtain 0.6s 5.3s linear forwards;
 }
 
 @keyframes curtain {
@@ -160,36 +161,37 @@ body {
   }
 }
 
+/* title animation */
 .title {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
   min-height: 100vh;
   transform: scale(0);
-  animation: showup .5s 5.3s linear forwards;
+  animation: showup 0.5s 5.3s linear forwards;
 }
 
-.textbox {
+.textBox {
   position: relative;
   height: fit-content;
   padding: 0 1rem;
 }
 
-.textbox h1 {
+.textBox h1 {
   color: #fff;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-align: center;
-  text-shadow: 0 0 10px #00b3ff,
-                0 0 20px #00b3ff,
-                0 0 40px #00b3ff;
+  text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff;
 }
 
 @keyframes showup {
   99% {
-      transform: scale(0);
-    }
+    transform: scale(0);
+  }
   100% {
     transform: scale(1);
   }
@@ -203,14 +205,13 @@ body {
   height: 100%;
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 0 10px #00b3ff,
-    0 0 20px #00b3ff,
-    0 0 40px #00b3ff;
-  animation: animateBar 5.5s 5.3s infinite;
+  box-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff;
+  animation: animateBar 5.5s 5.3s 3 forwards;
 }
 
 @keyframes animateBar {
-  0%, 2.5% {
+  0%,
+  2.5% {
     transform: scaleY(0) translateX(0);
   }
   10% {
@@ -219,7 +220,8 @@ body {
   90% {
     transform: scaleY(1) translateX(14rem);
   }
-  95%, 100% {
+  95%,
+  100% {
     transform: scaleY(0) translateX(14rem);
   }
 }
@@ -231,12 +233,12 @@ body {
   width: calc(100% + 3rem);
   height: calc(100% + 0.5rem);
   background: rgb(12, 12, 12);
-  animation: animateBarLayer 11s 5.3s infinite;
+  animation: animateBarLayer 11s 5.3s 1.5 forwards;
 }
 
 @keyframes animateBarLayer {
-
-  0%, 5% {
+  0%,
+  5% {
     transform: translateX(0);
   }
 
@@ -244,15 +246,125 @@ body {
     transform: translateX(14rem);
   }
   50% {
-    transform: translateX(14rem);
+    transform: translateX(14rem) scale(0);
   }
 
-  50.001%, 55% {
-    transform: translateX(-16.5rem);
+  50.001%,
+  55% {
+    transform: translateX(-16.5rem) scale(1);
   }
 
   98%,
   100% {
     transform: translateX(-1.5rem);
+  }
+}
+
+.linkBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.linkBox:hover a {
+  animation: none;
+}
+
+.linkBox a {
+  color: #ef62ca;
+  text-shadow: 0 0 10px #db3eb1, 0 0 20px #db3eb1, 0 0 40px #db3eb1;
+  /* text-decoration: none; */
+  animation: breathe 8s 5.3s infinite;
+}
+
+.linkBox a:hover {
+  color: #ffc8f0;
+  text-shadow: 0 0 10px #d63edb, 0 0 20px #d63edb, 0 0 40px #d63edb,
+    0 0 60px #d63edb;
+}
+
+@keyframes breathe {
+  0%,
+  3.1%,
+  15%,
+  18%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #a53f8a;
+    text-shadow: none;
+  }
+
+  3%,
+  15.1%,
+  18.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #ef62ca;
+    text-shadow: 0 0 10px #db3eb1, 0 0 20px #db3eb1, 0 0 40px #db3eb1;
+  }
+}
+
+@media screen and (min-width: 325px) {
+  .textBox h1 {
+    font-size: 3rem;
+  }
+  @keyframes animateBar {
+  0%,
+  2.5% {
+    transform: scaleY(0) translateX(0);
+  }
+  10% {
+    transform: scaleY(1) translateX(0);
+  }
+  90% {
+    transform: scaleY(1) translateX(19.5rem);
+  }
+  95%,
+  100% {
+    transform: scaleY(0) translateX(19.5rem);
+  }
+}
+
+@keyframes animateBarLayer {
+  0%,
+  5% {
+    transform: translateX(0);
+  }
+
+  45% {
+    transform: translateX(19.5rem);
+  }
+  50% {
+    transform: translateX(19.5rem) scale(0);
+  }
+
+  50.001%,
+  55% {
+    transform: translateX(-22rem) scale(1);
+  }
+
+  98%,
+  100% {
+    transform: translateX(-1.5rem);
+  }
+}
+
+  .linkBox {
+    flex-direction: row;
+    font-size: 1.5rem;
   }
 }
