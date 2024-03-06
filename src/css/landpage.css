@@ -33,7 +33,7 @@
 .circle div:nth-child(2) {
   opacity: 0;
   background: rgba(255, 255, 255, 0);
-  animation: move_01 1.5s 2s, move_02 2s linear 3.5s;
+  animation: move_01 1.5s 2s, move_02 1.5s linear 3.5s;
   box-shadow:
       -6em -6em rgba(255, 255, 255, 1),
       6em -6em rgba(255, 255, 255, 1),
@@ -83,7 +83,7 @@
     }
   
   100% {
-      transform: translate(0) scale(0);
+      transform: rotate(-360deg) scale(0);
       opacity: 0;
     }
 }
