@@ -86,7 +86,6 @@ body {
 
 @keyframes move_01 {
   0% {
-    opacity: 1;
     transform: scale(0);
   }
   100% {
@@ -129,17 +128,17 @@ body {
 
 .explode div:nth-child(1) {
   background: #fffcee;
-  animation: explode 1s 5s forwards;
+  animation: explode 1.5s 5s forwards;
 }
 
 .explode div:nth-child(2) {
   background: #8746c4;
-  animation: explode 1s 5.5s forwards;
+  animation: explode 1.5s 6s forwards;
 }
 
 .explode div:nth-child(3) {
   background: #2a094a;
-  animation: explode 1s 6s forwards;
+  animation: explode 1.5s 6.5s forwards;
 }
 
 @keyframes explode {
@@ -151,41 +150,6 @@ body {
     transform: scale(1);
   }
 }
-
-/* .explode div {
-  position: absolute;
-  top: calc((50% - 1500px));
-  left: calc((50% - 1500px));
-  width: 3000px;
-  height: 3000px;
-  border-radius: 50%;
-  transform: scale(0);
-}
-
-.explode div:nth-child(1) {
-  background: #fffcee;
-  animation: explode 1s 4s forwards;
-}
-
-.explode div:nth-child(2) {
-  background: #8746c4;
-  animation: explode 1s 4.5s forwards;
-}
-
-.explode div:nth-child(3) {
-  background: #2a094a;
-  animation: explode 1s 5s forwards;
-}
-
-@keyframes explode {
-  0% {
-    transform: scale(0);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-} */
 
 /* curtain */
 .curtain {
@@ -195,7 +159,7 @@ body {
   border-left: 150vw solid rgba(255, 255, 255, 0);
   border-right: 150vw solid rgba(255, 255, 255, 0);
   border-bottom: 500vw solid rgb(12, 12, 12);
-  animation: curtain 0.8s 6.5s linear forwards;
+  animation: curtain 1s 7s linear forwards;
 }
 
 @keyframes curtain {
@@ -214,7 +178,7 @@ body {
   gap: 3rem;
   min-height: 100vh;
   transform: scale(0);
-  animation: showup 0.5s 7s linear forwards;
+  animation: showup 0.5s 8s linear forwards;
 }
 
 .textBox {
@@ -249,7 +213,7 @@ body {
   border-radius: 10px;
   background: #fff;
   box-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff;
-  animation: animateBar 5.5s 7s 3 forwards;
+  animation: animateBar 5.5s 8s 3 forwards;
 }
 
 @keyframes animateBar {
@@ -276,7 +240,7 @@ body {
   width: calc(100% + 3rem);
   height: calc(100% + 0.5rem);
   background: rgb(12, 12, 12);
-  animation: animateBarLayer 10.95s 7s 1.5 forwards;
+  animation: animateBarLayer 10.95s 8s 1.5 forwards;
 }
 
 @keyframes animateBarLayer {
@@ -321,7 +285,7 @@ body {
   color: #ef62ca;
   text-shadow: 0 0 10px #db3eb1, 0 0 20px #db3eb1, 0 0 40px #db3eb1;
   /* text-decoration: none; */
-  animation: breathe 8s 7s infinite;
+  animation: breathe 8s 8s infinite;
 }
 
 .linkBox a:hover {
