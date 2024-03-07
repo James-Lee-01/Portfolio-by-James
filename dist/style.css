@@ -33,7 +33,7 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: #262626;
+  background: #fefdf6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@ body {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: #000;
   border-radius: 50%;
 }
 
@@ -53,13 +53,13 @@ body {
 
 .circle div:nth-child(2) {
   opacity: 0;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(0, 0, 0, 0);
   animation: move_01 1.5s 2s, move_02 1.5s linear 3.5s;
   box-shadow:
-      -6em -6em rgba(255, 255, 255, 1),
-      6em -6em rgba(255, 255, 255, 1),
-      6em 6em rgba(255, 255, 255, 1),
-      -6em 6em rgba(255, 255, 255, 1)
+      -6em -6em rgba(0, 0, 0, 1),
+      6em -6em rgba(0, 0, 0, 1),
+      6em 6em rgba(0, 0, 0, 1),
+      -6em 6em rgba(0, 0, 0, 1)
 }
 
 @keyframes anim_01 {
@@ -127,18 +127,8 @@ body {
 }
 
 .explode div:nth-child(1) {
-  background: #fffcee;
+  background: #000;
   animation: explode 1.5s 5s forwards;
-}
-
-.explode div:nth-child(2) {
-  background: #8746c4;
-  animation: explode 1.5s 6s forwards;
-}
-
-.explode div:nth-child(3) {
-  background: #2a094a;
-  animation: explode 1.5s 7s forwards;
 }
 
 @keyframes explode {
@@ -148,23 +138,6 @@ body {
 
   100% {
     transform: scale(1);
-  }
-}
-
-/* curtain */
-.curtain {
-  position: absolute;
-  bottom: -500vw;
-  left: -100vw;
-  border-left: 150vw solid rgba(255, 255, 255, 0);
-  border-right: 150vw solid rgba(255, 255, 255, 0);
-  border-bottom: 500vw solid rgb(12, 12, 12);
-  animation: curtain 1.5s 8s linear forwards;
-}
-
-@keyframes curtain {
-  100% {
-    transform: translateY(-500vw);
   }
 }
 
@@ -178,7 +151,7 @@ body {
   gap: 3rem;
   min-height: 100vh;
   transform: scale(0);
-  animation: showup 0.5s 9.5s linear forwards;
+  animation: showup 0.5s 6s linear forwards;
 }
 
 .textBox {
@@ -213,7 +186,7 @@ body {
   border-radius: 10px;
   background: #fff;
   box-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff;
-  animation: animateBar 5.5s 9.5s 3 forwards;
+  animation: animateBar 5.5s 6s 3 forwards;
 }
 
 @keyframes animateBar {
@@ -239,8 +212,8 @@ body {
   left: 0;
   width: calc(100% + 3rem);
   height: calc(100% + 0.5rem);
-  background: rgb(12, 12, 12);
-  animation: animateBarLayer 10.95s 9.5s 1.5 forwards;
+  background: rgb(0, 0, 0);
+  animation: animateBarLayer 10.95s 6s 1.5 forwards;
 }
 
 @keyframes animateBarLayer {
@@ -285,7 +258,7 @@ body {
   color: #ef62ca;
   text-shadow: 0 0 10px #db3eb1, 0 0 20px #db3eb1, 0 0 40px #db3eb1;
   /* text-decoration: none; */
-  animation: breathe 8s 9.5s infinite;
+  animation: breathe 8s 6s infinite;
 }
 
 .linkBox a:hover {
