@@ -99,7 +99,7 @@
 
 .explode div {
   position: absolute;
-  height: 200%;
+  height: 300%;
   aspect-ratio: 1;
   border-radius: 50%;
   transform: scale(0);
